@@ -8,22 +8,41 @@ class Fan:
         self.__radius = radius
         self.__color = color
         self.__on = on
-    def get_speed(self): return self.__speed
-    def set_speed(self, speed): self.__speed = speed
-    # same for radius, color, on
+
+    def get_speed(self):
+        return self.__speed
+
+    def set_speed(self, speed):
+        self.__speed = speed
+
+    def get_radius(self):
+        return self.__radius
+
+    def set_radius(self, radius):
+        self.__radius = radius
+
+    def get_color(self):
+        return self.__color
+
+    def set_color(self, color):
+        self.__color = color
+
+    def is_on(self):
+        return self.__on
+
+    def set_on(self, on):
+        self.__on = on
+
+
 def main():
     fan1 = Fan(Fan.FAST, 10, "yellow", True)
     fan2 = Fan(Fan.MEDIUM, 5, "blue", False)
-    print("Fan1 speed:", fan1.get_speed())
-    print("Fan2 speed:", fan2.get_speed())
-class Car:
-    def __init__(self, year_model, make):
-        self.__year_model = year_model
-        self.__make = make
-        self.__speed = 0
-    def accelerate(self): self.__speed += 5
-    def brake(self): self.__speed -= 5
-def main():
-    car = Car(2024, "Toyota")
-    for _ in range(5): car.accelerate(); print(car.get_speed())
-    for _ in range(5): car.brake(); print(car.get_speed())
+
+    print("Fan 1 → Speed:", fan1.get_speed(), "Radius:", fan1.get_radius(),
+          "Color:", fan1.get_color(), "On:", fan1.is_on())
+    print("Fan 2 → Speed:", fan2.get_speed(), "Radius:", fan2.get_radius(),
+          "Color:", fan2.get_color(), "On:", fan2.is_on())
+
+
+if __name__ == "__main__":
+    main()
