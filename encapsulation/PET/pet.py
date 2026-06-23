@@ -12,3 +12,5 @@ def main():
     pet.set_animal_type("Dog")
     pet.set_age(3)
     print(pet.get_name(), pet.get_animal_type(), pet.get_age())
+if __name__ == "__main__":
+    main()
