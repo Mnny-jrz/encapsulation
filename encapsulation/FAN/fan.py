@@ -11,3 +11,8 @@ class Fan:
     def get_speed(self): return self.__speed
     def set_speed(self, speed): self.__speed = speed
     # same for radius, color, on
+def main():
+    fan1 = Fan(Fan.FAST, 10, "yellow", True)
+    fan2 = Fan(Fan.MEDIUM, 5, "blue", False)
+    print("Fan1 speed:", fan1.get_speed())
+    print("Fan2 speed:", fan2.get_speed())
