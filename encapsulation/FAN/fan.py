@@ -16,3 +16,8 @@ def main():
     fan2 = Fan(Fan.MEDIUM, 5, "blue", False)
     print("Fan1 speed:", fan1.get_speed())
     print("Fan2 speed:", fan2.get_speed())
+class Car:
+    def __init__(self, year_model, make):
+        self.__year_model = year_model
+        self.__make = make
+        self.__speed = 0
